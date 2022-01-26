@@ -1,9 +1,9 @@
 <?php
 
-$text = " Hello word ";
- $text2 = "Good morning" ; 
+$text = " Hello  ";
+ $text2 = "Word" ; 
 
-echo $text ." " . $text2;
+echo $text ." " . $text2; // : Hello Word 
 
 
 ?>
