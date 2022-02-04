@@ -11,3 +11,6 @@ person("nada");
 person("reda");
 
 ?>
+<!-- hello hicham -->
+<!-- hello nada -->
+<!-- hello reda -->
