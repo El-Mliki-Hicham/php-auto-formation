@@ -1,31 +1,30 @@
-<!DOCTYPE html>
-<html>
-<body>
+
 
 <?php
-class Fruit {
-  // Properties
-  public $name;
-  public $color;
 
-  // Methods
-  function set_name($name) {
-    $this->name = $name;
-  }
-  function get_name() {
-    return $this->name;
-  }
+class person {
+public $name ;
+public $prix; 
+
+public function Hello(){
+echo'hello';
+}
+ function set_name($name){
+
+  $this->name =$name;
 }
 
-$apple = new Fruit();
-$banana = new Fruit();
-$apple->set_name('Apple');
-$banana->set_name('Banana');
+ function get_name(){
+  return $this->name;
+}
 
-echo $apple->get_name();
-echo "<br>";
-echo $banana->get_name();
-?>
- 
-</body>
-</html>
+}
+$Person = new person();
+
+$Person->Hello();
+
+$Person->set_name('hicham');
+echo " ".$Person->get_name();
+
+
+
