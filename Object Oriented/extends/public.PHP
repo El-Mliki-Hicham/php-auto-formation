@@ -13,18 +13,30 @@ echo'hello';
 
   $this->name =$name;
 }
+}
 
- function get_name(){
-  return $this->name;
+class Colors extends person {
+
+  public $color ; 
+
+public function set_color($color){
+
+  $this->color = $color;
+
 }
 
 }
-$Person = new person();
 
-$Person->Hello();
+$colors=new Colors();
 
-$Person->set_name('hicham');
-echo " ".$Person->get_name();
+$colors->hello();
+
+$colors->set_name('hicham');
+
+$colors->set_color(" blue");
+
+
+echo ' '.$colors->name.' your color is '.$colors->color; 
 
 
 
