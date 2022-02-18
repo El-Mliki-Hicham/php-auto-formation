@@ -6,19 +6,20 @@ class Calculatrice{
     private $operation;
 
     function __construct($a,$b,$operation) {
-        $this->x = $a;
-        $this->y = $b;
+        $this->a = $a;
+        $this->b = $b;
         $this->operation = $operation;
     }
  
     function calculer(){
         $solution = null;
         switch($this->operation){
-            case "+" : $solution = $this->x + $this->y;
+            case "+" : $solution = $this->a + $this->b;
                 break;
-            case "-" : $solution = $this->x - $this->y;
+            case "-" : $solution = $this->a - $this->b;
                 break;
         }
+        
         return $solution;
     } 
 
@@ -35,8 +36,8 @@ class Calculatrice{
     // Traitement
 
     // Récupération des variables de la page
-    if(isset($_POST['x'])) $a = $_POST['x'];
-    if(isset($_POST['y']))$b = $_POST['y'];
+    if(isset($_POST['x']))     $a = $_POST['x'];
+    if(isset($_POST['y']))     $b = $_POST['y'];
     if(isset($_POST['operation'])) $operation = $_POST['operation'];
 
     // Ajouter la valeur du nombre au X ou Y
