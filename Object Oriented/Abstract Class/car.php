@@ -1,18 +1,29 @@
 <?php
-abstract class Vehicle {
-    // declare a normal method
-    public function start($name) {
+ interface  Vehicle {
+
+      function start($name) ;
+    
+    
+
+ } 
+class Car implements Vehicle {
+
+    public function start($name){
         echo $name;
     }
-}
 
-class Car extends Vehicle {
- 
 }
 
 $car = new Car();
 
 $car->start("car 1"); 
 
+$Vehicle = new Vehicle();
+
+$Vehicle->start("car 2")
 
 ?>
+
+<!-- redifinition  -->
+<!-- object interface -->
+<!-- encapsulation -->
