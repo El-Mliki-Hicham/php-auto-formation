@@ -11,18 +11,32 @@ abstract class Person {
  interface Gestion   {
     
      public function Ajouter($data);
+     public function afficherData();
  
 }
  class IGestion implements Gestion  {
     // use Person;
-    // public  $listData = array();
+    public  $listData = array();
      public function Ajouter($data)
     {
-        $listData = []; 
-        $listData +=$data ;
- 
-       return $listData ;       
+       $_data= implode(" ", $data);
+    // $_data = (object)$data;
+    //    var_dump($_data);
+    //      die();
+        array_push($this->listData,$_data);
     }
+    public function afficherData(){
+        $data =  $this->listData;
+        foreach($data as $value){
+            echo $value .'<br>';
+        }
+    //     var_dump($data);
+        
+    // // var_dump(implode(",", $data));
+    // die();
+
+    }
+
 
 }
 class Formateur extends Person {
@@ -51,9 +65,11 @@ $Stagiaire = new Stagiaire;
 $Gestion = new IGestion;
 $AddFormateur =  $formateur->addItems('hicham',"mliki");
 $StagiaireAdd =  $Stagiaire->addItems('nada',"stitou");
-$AddToArray = $Gestion->Ajouter($AddFormateur);
-$AddToArrayt = $Gestion->Ajouter($StagiaireAdd);
-var_dump( $AddToArray ,$AddToArrayt);
+$StagiaireAdde =  $Stagiaire->addItems('nadaz',"szztitou");
+$Gestion->Ajouter($AddFormateur);
+$Gestion->Ajouter($StagiaireAdd);
+$Gestion->Ajouter($StagiaireAdde);
+$Gestion->afficherData();
 
 
 ?>
