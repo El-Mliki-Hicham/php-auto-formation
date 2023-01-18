@@ -2,8 +2,11 @@
 require_once("Animal.php");
 
 
-$Animal = new class\Animal\Animal();
+$Animal = new class\Table\Animal();
+$Person = new class\Table\Person();
 
 $Animal->getName('dog');
-echo $Animal->name
+$Person->getName('hicham');
+echo $Animal->name . "  ".
+$Person->name;
 ?>
