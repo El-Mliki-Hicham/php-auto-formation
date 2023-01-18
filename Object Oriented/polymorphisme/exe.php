@@ -4,16 +4,15 @@ abstract class Person {
     
  public $Nom;
  public $Prenom;
-//  public static $compteur= 0 ;
- 
+
    
 }
  interface Gestion   {
     
      public function Ajouter($data);
+     public function Supprimer($data);
      public function afficherData();
-     
- 
+
 }
  class IGestion implements Gestion  {
     private  $listData = array();
@@ -22,11 +21,18 @@ abstract class Person {
        $_data= implode(" ", $data);
         array_push($this->listData,$_data);
     }
+
+     public function Supprimer($data){
+         $_data= implode(" ", $data);
+       $arraySearch= array_search($_data,$this->listData);
+       \array_splice($this->listData,$arraySearch,1);
+     }
     public function afficherData(){
         $data =  $this->listData;
         foreach($data as $value){
             echo $value .'<br>';
         }
+        echo "total Person : ". count($data);
     }
 
 
@@ -56,6 +62,7 @@ $StagiaireAdd2 =  $Stagiaire->addItems('nadaz',"szztitou");
 $Gestion->Ajouter($AddFormateur);
 $Gestion->Ajouter($StagiaireAdd);
 $Gestion->Ajouter($StagiaireAdd2);
+$Gestion->Supprimer($StagiaireAdd2);
 $Gestion->afficherData();
 
 
