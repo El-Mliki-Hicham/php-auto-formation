@@ -58,7 +58,7 @@ $Stagiaire = new Stagiaire;
 $Gestion = new IGestion;
 $AddFormateur =  $formateur->addItems('hicham',"mliki");
 $StagiaireAdd =  $Stagiaire->addItems('nada',"stitou");
-$StagiaireAdd2 =  $Stagiaire->addItems('nadaz',"szztitou");
+$StagiaireAdd2 =  $Stagiaire->addItems('bilal',"barina");
 $Gestion->Ajouter($AddFormateur);
 $Gestion->Ajouter($StagiaireAdd);
 $Gestion->Ajouter($StagiaireAdd2);
