@@ -4,6 +4,15 @@ abstract class Person {
     
  public $Nom;
  public $Prenom;
+ static $compteur = 0;
+ function __construct()
+ {
+    self::$compteur++;
+ }
+
+ static function getTotal(){
+        return self::$compteur;
+ }
 
    
 }
@@ -64,6 +73,7 @@ $Gestion->Ajouter($StagiaireAdd);
 $Gestion->Ajouter($StagiaireAdd2);
 $Gestion->Supprimer($StagiaireAdd2);
 $Gestion->afficherData();
+  echo '<br> total class Person :'.Person::getTotal();
 
 
 ?>
