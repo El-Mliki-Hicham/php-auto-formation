@@ -1,7 +1,6 @@
 <?php
 
-abstract class Person {
-    
+abstract class Person {  
  public $Nom;
  public $Prenom;
  static $compteur = 0;
@@ -10,7 +9,7 @@ abstract class Person {
     self::$compteur++;
  }
 
- static function getTotal(){
+ static function getTotalPerson(){
         return self::$compteur;
  }
 
@@ -73,7 +72,7 @@ $Gestion->Ajouter($StagiaireAdd);
 $Gestion->Ajouter($StagiaireAdd2);
 $Gestion->Supprimer($StagiaireAdd2);
 $Gestion->afficherData();
-  echo '<br> total class Person :'.Person::getTotal();
+  echo '<br> total class Person :'.Person::getTotalPerson();
 
 
 ?>
